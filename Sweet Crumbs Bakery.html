@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sweet Crumbs Bakery</title>
+<style>
+html { box-sizing: border-box; padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+*, *::before, *::after { box-sizing: inherit; }
+body { margin: 0; font-family: "Segoe UI", Helvetica, Arial, sans-serif; line-height: 1.7; color: #4a4458; background: #fff9fb; }
+h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; margin: 0 0 10px; color: #4a4458; }
+p { margin: 0 0 12px; }
+a { color: #7a5ca8; }
+
+header { background: #f3e8fb; }
+nav { max-width: 900px; margin: 0 auto; padding: 14px 20px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; }
+.logo { font-family: Georgia, serif; font-size: 1.3rem; font-weight: bold; color: #4a4458; text-decoration: none; }
+nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px; }
+nav ul a { display: block; padding: 6px 12px; color: #4a4458; text-decoration: none; border-radius: 16px; }
+nav ul a:hover, nav ul a:focus { background: #ffffff; }
+
+.hero { background: #ffe4ec; padding: 60px 20px; text-align: center; }
+.hero h1 { font-size: 2.4rem; }
+.hero p { max-width: 520px; margin: 0 auto 12px; }
+.btn { display: inline-block; margin: 8px 6px 0; padding: 10px 24px; border-radius: 24px; background: #d6ecfa; color: #4a4458; text-decoration: none; font-weight: bold; border: 2px solid #b9dcf2; }
+.btn:hover, .btn:focus { background: #b9dcf2; }
+
+section { padding: 46px 20px; }
+.wrap { max-width: 900px; margin: 0 auto; }
+.mint { background: #e6f7ee; }
+.lemon { background: #fffbe0; }
+.lavender { background: #f3e8fb; }
+.peach { background: #ffeee2; }
+.title { font-size: 1.7rem; margin-bottom: 16px; }
+
+.menu { list-style: none; margin: 0; padding: 0; background: #ffffff; border: 2px solid #f3e8fb; border-radius: 12px; }
+.menu li { display: flex; justify-content: space-between; gap: 16px; padding: 12px 18px; border-bottom: 1px solid #f3e8fb; }
+.menu li:last-child { border-bottom: none; }
+.menu span.name { font-weight: 600; }
+.menu small { display: block; font-weight: normal; color: #7d7690; }
+.menu span.price { font-weight: bold; color: #7a5ca8; white-space: nowrap; }
+
+.gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 12px; }
+.shot { border-radius: 12px; text-align: center; padding: 18px 8px 10px; font-size: 0.9rem; font-weight: 600; }
+.shot div { font-size: 3rem; line-height: 1.2; }
+.bg1 { background: #ffe4ec; } .bg2 { background: #ffeee2; } .bg3 { background: #e6f7ee; } .bg4 { background: #f3e8fb; } .bg5 { background: #d6ecfa; } .bg6 { background: #fffbe0; }
+
+ul.plain { margin: 0 0 12px; padding-left: 20px; }
+ul.plain li { margin-bottom: 8px; }
+.box { background: #ffffff; border: 2px solid #ffe4ec; border-radius: 12px; padding: 14px 18px; margin-bottom: 12px; }
+.box h3 { font-size: 1.05rem; margin-bottom: 2px; }
+.box p { margin: 0; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+ul.contact { list-style: none; margin: 0 0 14px; padding: 0; }
+ul.contact li { margin-bottom: 8px; }
+table { border-collapse: collapse; width: 100%; background: #ffffff; }
+th, td { padding: 8px 12px; text-align: left; border-bottom: 1px solid #f3e8fb; }
+th { background: #f3e8fb; }
+form label { display: block; font-weight: 600; margin-bottom: 4px; }
+form input, form textarea { width: 100%; padding: 10px; margin-bottom: 12px; border: 2px solid #e4d7f2; border-radius: 8px; font: inherit; background: #ffffff; color: #4a4458; }
+form input:focus, form textarea:focus { outline: none; border-color: #b79ae0; }
+form button { cursor: pointer; font: inherit; font-weight: bold; }
+
+footer { background: #f3e8fb; text-align: center; padding: 18px 20px; }
+footer p { margin: 0; }
+
+@media (max-width: 600px) {
+  nav { justify-content: center; }
+  .hero h1 { font-size: 1.9rem; }
+  section { padding: 34px 16px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a class="logo" href="#home">Sweet Crumbs</a>
+    <ul>
+      <li><a href="#cakes">Cakes</a></li>
+      <li><a href="#pastries">Pastries</a></li>
+      <li><a href="#cookies">Cookies</a></li>
+      <li><a href="#custom">Custom</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#offers">Offers</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="hero" id="home">
+  <h1>Freshly baked, made with love</h1>
+  <p>Cakes, pastries and cookies baked every morning from simple ingredients.</p>
+  <a class="btn" href="#cakes">See our menu</a>
+  <a class="btn" href="#contact">Order now</a>
+</div>
+
+<section id="cakes">
+  <div class="wrap">
+    <h2 class="title">Cakes <small>(per half kg)</small></h2>
+    <ul class="menu">
+      <li><span class="name">Strawberry Cream Cake<small>Vanilla sponge, fresh strawberries and cream</small></span><span class="price">₹550</span></li>
+      <li><span class="name">Chocolate Truffle Cake<small>Dark chocolate layers with ganache</small></span><span class="price">₹600</span></li>
+      <li><span class="name">Butterscotch Cake<small>Caramel crunch and butterscotch cream</small></span><span class="price">₹520</span></li>
+      <li><span class="name">Blueberry Cheesecake<small>Baked cheesecake on a biscuit base</small></span><span class="price">₹680</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="pastries" class="peach">
+  <div class="wrap">
+    <h2 class="title">Pastries</h2>
+    <ul class="menu">
+      <li><span class="name">Butter Croissant<small>Flaky and golden</small></span><span class="price">₹90</span></li>
+      <li><span class="name">Red Velvet Cupcake<small>Cream cheese frosting</small></span><span class="price">₹80</span></li>
+      <li><span class="name">Glazed Doughnut<small>Soft with a sugar glaze</small></span><span class="price">₹70</span></li>
+      <li><span class="name">Apple Pie Slice<small>Cinnamon apples in a golden crust</small></span><span class="price">₹110</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="cookies">
+  <div class="wrap">
+    <h2 class="title">Cookies <small>(box of six)</small></h2>
+    <ul class="menu">
+      <li><span class="name">Choco Chip Cookies<small>Dark chocolate chunks</small></span><span class="price">₹180</span></li>
+      <li><span class="name">Oatmeal Raisin<small>Oats, raisins and cinnamon</small></span><span class="price">₹160</span></li>
+      <li><span class="name">Almond Biscotti<small>Twice-baked and crunchy</small></span><span class="price">₹200</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="custom" class="lavender">
+  <div class="wrap">
+    <h2 class="title">Custom cake designs</h2>
+    <p>Tell us your idea and we will bake it. Please order at least 3 days before your event.</p>
+    <div class="box"><h3>Birthday cakes</h3><p>Characters, numbers and photo toppers. From ₹800.</p></div>
+    <div class="box"><h3>Wedding cakes</h3><p>Elegant tiered cakes with fresh flowers. From ₹4,500.</p></div>
+    <div class="box"><h3>Party cakes</h3><p>Fun shapes for baby showers and farewells. From ₹900.</p></div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="wrap">
+    <h2 class="title">Gallery</h2>
+    <div class="gallery">
+      <div class="shot bg1"><div>🎂</div>Celebration cake</div>
+      <div class="shot bg2"><div>🧁</div>Cupcakes</div>
+      <div class="shot bg3"><div>🥐</div>Croissants</div>
+      <div class="shot bg4"><div>🍪</div>Cookies</div>
+      <div class="shot bg5"><div>🍰</div>Cake slices</div>
+      <div class="shot bg6"><div>🍩</div>Doughnuts</div>
+    </div>
+  </div>
+</section>
+
+<section id="offers" class="mint">
+  <div class="wrap">
+    <h2 class="title">Seasonal offers</h2>
+    <ul class="plain">
+      <li><strong>Festive season:</strong> buy 1 get 1 free on cupcakes every weekend.</li>
+      <li><strong>Winter special:</strong> 15% off all cookie boxes.</li>
+      <li><strong>Birthday month:</strong> free message topper on any cake.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="contact" class="lemon">
+  <div class="wrap">
+    <h2 class="title">Contact us</h2>
+    <div class="grid">
+      <div>
+        <ul class="contact">
+          <li><strong>Address:</strong> 12 Baker Street, Main Market</li>
+          <li><strong>Phone:</strong> <a href="tel:+910000000000">+91 00000 00000</a></li>
+          <li><strong>Email:</strong> <a href="mailto:hello@sweetcrumbs.example">hello@sweetcrumbs.example</a></li>
+        </ul>
+        <table>
+          <tr><th>Day</th><th>Hours</th></tr>
+          <tr><td>Monday – Friday</td><td>8 am – 9 pm</td></tr>
+          <tr><td>Saturday</td><td>8 am – 10 pm</td></tr>
+          <tr><td>Sunday</td><td>9 am – 8 pm</td></tr>
+        </table>
+      </div>
+      <form action="mailto:hello@sweetcrumbs.example" method="post" enctype="text/plain">
+        <label for="name">Your name</label>
+        <input id="name" name="name" type="text" required>
+        <label for="email">Your email</label>
+        <input id="email" name="email" type="email" required>
+        <label for="message">What would you like to order?</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        <button class="btn" type="submit">Send request</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Sweet Crumbs Bakery</p>
+</footer>
+
+</body>
+</html>
